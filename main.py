@@ -1,4 +1,5 @@
 import sys
+from stats import count_words
 
 def main():
     if len(sys.argv) != 2:
@@ -11,9 +12,6 @@ def main():
         file_contents = f.read()
 
     generate_report(path, file_contents)
-
-def count_words(text):
-    return len(text.split())
     
 def count_characters(text):
     char_dict = {}
